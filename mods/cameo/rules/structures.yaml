@@ -334,7 +334,7 @@ NUKE:
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: fact
-		Queue: Building.GDI, Building.Nod, RABuilding.GDI, RABuilding.Nod
+		Queue: Building.GDI, Building.Nod, RABuilding.GDI, RABuilding.Nod, Building.MODGDI, Building.MODNod, RABuilding.MODGDI, RABuilding.MODNod
 		Description: Generates power
 	Building:
 		Footprint: xX xx ==
@@ -367,7 +367,7 @@ NUK2:
 	Buildable:
 		BuildPaletteOrder: 80
 		Prerequisites: anyhq, ~techlevel.medium
-		Queue: Building.GDI, Building.Nod, RABuilding.GDI, RABuilding.Nod
+		Queue: Building.GDI, Building.Nod, RABuilding.GDI, RABuilding.Nod, Building.MODGDI, Building.MODNod, RABuilding.MODGDI, RABuilding.MODNod
 		Description: Provides more power, cheaper than the\nstandard Power Plant
 	Building:
 		Footprint: xX xx ==
@@ -403,7 +403,7 @@ PROC:
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: anypower
-		Queue: Building.GDI, Building.Nod, RABuilding.GDI, RABuilding.Nod, Building.X_Infantry, Building.X_Vehicles, Building.X_Aircrafts, Building.X_Monsters, Building.X_All
+		Queue: Building.GDI, Building.Nod, RABuilding.GDI, RABuilding.Nod, Building.X_Infantry, Building.X_Vehicles, Building.X_Aircrafts, Building.X_Monsters, Building.X_All, Building.MODGDI, Building.MODNod, RABuilding.MODGDI, RABuilding.MODNod
 		Description: Processes raw Tiberium\ninto useable resources
 	Building:
 		Footprint: _x_ xxx === ===
@@ -453,7 +453,7 @@ SILO:
 	Buildable:
 		BuildPaletteOrder: 35
 		Prerequisites: proc
-		Queue: Defence.GDI, Defence.Nod, RADefence.GDI, RADefence.Nod
+		Queue: Defence.GDI, Defence.Nod, RADefence.GDI, RADefence.Nod, Building.IOK, RABuilding.IOK, Defence.MODGDI, Defence.MODNod, RADefence.MODGDI, RADefence.MODNod
 		Description: Stores processed Tiberium
 	Building:
 		Footprint: xx
@@ -858,7 +858,7 @@ HPAD.GDI:
 	Buildable:
 		BuildPaletteOrder: 50
 		Prerequisites: proc
-		Queue: Building.GDI, RABuilding.GDI
+		Queue: Building.GDI, RABuilding.GDI, Building.MODGDI, RABuilding.MODGDI
 		Description: Produces, rearms and\nrepairs helicopters
 	Building:
 		Footprint: xx xx
@@ -926,7 +926,7 @@ HPAD.NOD:
 	Buildable:
 		BuildPaletteOrder: 50
 		Prerequisites: proc
-		Queue: Building.Nod, RABuilding.Nod
+		Queue: Building.Nod, RABuilding.Nod, Building.MODNod, RABuilding.MODNod
 		Description: Produces, rearms and\nrepairs helicopters
 	Building:
 		Footprint: xx xx
@@ -994,7 +994,7 @@ HQ:
 	Buildable:
 		BuildPaletteOrder: 70
 		Prerequisites: proc, ~techlevel.medium
-		Queue: Building.GDI, Building.Nod, RABuilding.GDI, RABuilding.Nod
+		Queue: Building.GDI, Building.Nod, RABuilding.GDI, RABuilding.Nod, Building.MODGDI, Building.MODNod, RABuilding.MODGDI, RABuilding.MODNod
 		Description: Provides radar and Air Strike support power.\nUnlocks higher-tech units and buildings.\nRequires power to operate.
 	Building:
 		Footprint: X_ xx ==
@@ -1062,7 +1062,7 @@ FIX:
 	Buildable:
 		BuildPaletteOrder: 60
 		Prerequisites: vehicleproduction
-		Queue: Building.GDI, Building.Nod, RABuilding.GDI, RABuilding.Nod
+		Queue: Building.GDI, Building.Nod, RABuilding.GDI, RABuilding.Nod, Building.ANSWER, Building.TOMORROW, RABuilding.ANSWER, RABuilding.TOMORROW, Building.DTUSA,  RABuilding.DTUSA, Building.DTRUSSIA,  RABuilding.DTRUSSIA, Building.DTJAPAN, RABuilding.DTJAPAN, Building.MODGDI, Building.MODNod, RABuilding.MODGDI, RABuilding.MODNod
 		Description: Repairs vehicles
 	Building:
 		Footprint: _+_ +++ _+_
@@ -1112,7 +1112,7 @@ EYE:
 	Buildable:
 		BuildPaletteOrder: 100
 		Prerequisites: anyhq, ~techlevel.high, !ionc
-		Queue: Building.GDI, RABuilding.GDI
+		Queue: Building.GDI, RABuilding.GDI, Building.MODGDI, RABuilding.MODGDI
 		Description: Provides radar and Orbital Ion Cannon support power.\nRequires power to operate.
 	Building:
 		Footprint: X_ xx ==
@@ -1180,8 +1180,8 @@ TMPL:
 		Prerequisite: anyhq
 	Buildable:
 		BuildPaletteOrder: 100
-		Prerequisites: anyhq, ~techlevel.high, !nodnuke
-		Queue: Building.Nod, RABuilding.Nod
+		Prerequisites: anyhq, ~techlevel.high, !nodnuke, ~!chemnod
+		Queue: Building.Nod, RABuilding.Nod, Building.MODNod, RABuilding.MODNod
 		Description: Provides Nuclear Strike support power.\nUnlocks Stealth Tank, Chem. Warrior and Obelisk of Light.\nRequires power to operate.
 	Building:
 		Footprint: xxx xxx ===
@@ -1251,8 +1251,8 @@ GUN:
 		Name: Turret
 	Buildable:
 		BuildPaletteOrder: 45
-		Prerequisites: barracks
-		Queue: Defence.GDI, Defence.Nod, RADefence.GDI, RADefence.Nod
+		Prerequisites: barracks, ~!chemnod
+		Queue: Defence.GDI, Defence.Nod, RADefence.GDI, RADefence.Nod, Defence.MODGDI, Defence.MODNod, RADefence.MODGDI, RADefence.MODNod
 		Description: Basic Anti-Tank base defense.\n  Strong vs Tanks, vehicles\n  Weak vs Infantry
 	Building:
 	Health:
@@ -1301,7 +1301,7 @@ SAM:
 	Buildable:
 		BuildPaletteOrder: 50
 		Prerequisites: barracks
-		Queue: Defence.Nod, RADefence.Nod, Defence.GDI, RADefence.GDI
+		Queue: Defence.Nod, RADefence.Nod, Defence.GDI, RADefence.GDI, Defence.MODGDI, Defence.MODNod, RADefence.MODGDI, RADefence.MODNod
 		Description: Anti-Aircraft base defense.\n  Strong vs Aircraft\n  Cannot target Ground units.
 	Building:
 		Footprint: xx
@@ -1346,7 +1346,7 @@ OBLI:
 	Buildable:
 		BuildPaletteOrder: 60
 		Prerequisites: tmpl, ~techlevel.high
-		Queue: Defence.Nod, RADefence.Nod
+		Queue: Defence.Nod, RADefence.Nod, Defence.MODNod, RADefence.MODNod
 		Description: Advanced base defense.\nRequires power to operate.\n  Strong vs all Ground units\n  Cannot target Aircraft
 	Selectable:
 		Bounds: 24,24
@@ -1394,7 +1394,7 @@ GTWR:
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: barracks
-		Queue: Defence.GDI, Defence.Nod, RADefence.GDI, RADefence.Nod
+		Queue: Defence.GDI, Defence.Nod, RADefence.GDI, RADefence.Nod, Defence.MODGDI, Defence.MODNod, RADefence.MODGDI, RADefence.MODNod
 		Description: Basic defensive structure.\n  Strong vs Infantry\n  Weak vs Tanks
 	Building:
 	Health:
@@ -1430,7 +1430,7 @@ ATWR:
 	Buildable:
 		BuildPaletteOrder: 60
 		Prerequisites: anyhq, ~techlevel.medium
-		Queue: Defence.GDI, RADefence.GDI
+		Queue: Defence.GDI, RADefence.GDI, Defence.MODGDI, RADefence.MODGDI
 		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Tanks\n  Weak vs Infantry
 	Selectable:
 		Bounds: 24,24
@@ -1477,7 +1477,7 @@ SBAG:
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: fact
-		Queue: Defence.GDI, RADefence.GDI
+		Queue: Defence.GDI, RADefence.GDI, Defence.MODGDI, RADefence.MODGDI
 		Description: Stops infantry and light vehicles.\nCan be crushed by tanks.
 	Armor:
 		Type: Light
@@ -1499,7 +1499,7 @@ CYCL:
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: fact
-		Queue: Defence.Nod, RADefence.Nod
+		Queue: Defence.Nod, RADefence.Nod, Defence.DTUSA, RADefence.DTUSA, Defence.MODNod, RADefence.MODNod
 		Description: Stops infantry and light vehicles.\nCan be crushed by tanks.
 	Armor:
 		Type: Light
@@ -1521,7 +1521,7 @@ BRIK:
 	Buildable:
 		BuildPaletteOrder: 30
 		Prerequisites: vehicleproduction
-		Queue: Defence.GDI, Defence.Nod, Defence.Allies, Defence.Soviet, RADefence.GDI, RADefence.Nod, RADefence.Allies, RADefence.Soviet
+		Queue: Defence.GDI, Defence.Nod, Defence.Allies, Defence.Soviet, RADefence.GDI, RADefence.Nod, RADefence.Allies, RADefence.Soviet, Defence.DTJAPAN, RADefence.DTJAPAN, Defence.ModAllies RADefence.ModAllies, RADefence.ModSoviet Defence.ModSoviet, Defence.TSGDI, Defence.TSNod, RADefence.TSGDI, RADefence.TSNod, Defence.MODNod, RADefence.MODNod, Defence.MODGDI, RADefence.MODGDI
 		Description: Stops infantry and most tanks.\nBlocks some projectiles.
 	Health:
 		HP: 25000
@@ -1593,7 +1593,7 @@ CNCSYRD:
 	Buildable:
 		BuildPaletteOrder: 50
 		Prerequisites: proc
-		Queue: Building.GDI, RABuilding.GDI
+		Queue: Building.GDI, RABuilding.GDI, Building.MODGDI, RABuilding.MODGDI
 	Production@NORMAL:
 		Produces: Naval.GDI
 		RequiresCondition: !classicproductionqueues
@@ -1622,7 +1622,7 @@ CNCSPEN:
 	Buildable:
 		BuildPaletteOrder: 50
 		Prerequisites: proc
-		Queue: Building.Nod, RABuilding.Nod
+		Queue: Building.Nod, RABuilding.Nod, Building.MODNod, RABuilding.MODNod
 	Production@NORMAL:
 		Produces: Naval.Nod
 		RequiresCondition: !classicproductionqueues
@@ -2092,47 +2092,3 @@ debugdummy:
 		Prerequisite: NOT AVAILABLE
 	ProvidesPrerequisite@3:
 		Prerequisite: .
-
-EVO:
-	Inherits: ^BaseBuilding
-	RenderSprites:
-		Palette: ra_temperat
-	Buildable:
-		BuildPaletteOrder: 0
-		Prerequisites: ~fact, ~!fact
-		Queue: Building.GDI, Building.Nod, RABuilding.GDI, RABuilding.Nod
-		BuildDuration: 330
-		Description: Provides advanced mutations for ants.\nCan combine units.
-	Valued:
-		Cost: 1500
-	Tooltip:
-		Name: Evolution Chamber
-	Building:
-		Footprint: ___ xxx
-		Dimensions: 3,2
-	Health:
-		HP: 600
-	Armor:
-		Type: Wood
-	RevealsShroud:
-		Range: 5c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 4c0
-	ProvidesPrerequisite@buildingname:
-	Cargo:
-		Types: Infantry, Vehicle
-		MaxWeight: 5
-		PipCount: 5
-		PassengerFacing: 0
-	CargoTransformer:
-		TransformSound: cargotransform.aud
-		Combinations:
-			e2: e1, e1
-			e3: e2, e2
-	RallyPoint:
-	HitShape:
-		UseTargetableCellsOffsets: true
-		Type: Rectangle
-			TopLeft: -1536, -512
-			BottomRight: 1536, 512

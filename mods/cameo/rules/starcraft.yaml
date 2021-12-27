@@ -1,3 +1,101 @@
+World:
+    FactionCA@terran:
+		Name: Terran SC
+		InternalName: terran
+        Game: StarCraft        
+		Side: Factions
+		Description: Terrans\nFeatures:\n- Units consume power (supply)\n- Unit production pauses on low power\n- Buildings and defenses do not require power to operate\n- Relatively resilient and powerful units\nSupport powers: Nuclear Strike\n\nGameplay notice: Right-click/deploy lifts buildings,\nuse ctrl+click to set primary producers instead
+	FactionCA@protoss:
+		Name: Protoss SC
+		InternalName: protoss
+        Game: StarCraft        
+		Side: Factions
+		Description: Protoss\nFeatures:\n- Units consume power (supply)\n- Unit production pauses on low power\n- Buildings and defenses do not require power to operate\n- Relatively resilient and powerful units\nSupport powers: Purifier Beam
+	FactionCA@zerg:
+		Name: Zerg SC
+		InternalName: zerg
+        Game: StarCraft        
+		Side: Factions
+		Description: Zerg\nFeatures:\n- Units consume power (supply)\n- Unit production pauses on low power\n- Buildings and defenses do not require power to operate\n- Relatively powerful units\nSupport powers: Nuclear Strike           
+	FactionCA@RandomSC:
+		Name: Any
+		InternalName: RandomSC
+		RandomFactionMembers: terran, protoss, zerg
+        Game: StarCraft
+		Side: Random
+		Description: Random Faction\nA random faction from StarCraft will be chosen when the game starts.
+    ####################################################################################################
+	#		SC TERRAN
+	####################################################################################################
+
+	MPStartUnits@mcvonlyterran:
+		Class: none
+		ClassName: MCV Only
+		Factions: terran
+		BaseActor: sctmcv
+
+	MPStartUnits@defaultterran:
+		Class: light
+		ClassName: Light Support
+		Factions: terran
+		BaseActor: sctmcv
+		SupportActors: scmarine,scmarine,scmarine,scfirebat,scmedic,scvulture
+
+	MPStartUnits@heavyterran:
+		Class: heavy
+		ClassName: Heavy Support
+		Factions: terran
+		BaseActor: sctmcv
+		SupportActors: scmarine,scmarine,scfirebat,scmedic,scvulture,scsiegetank,scsiegetank
+
+	####################################################################################################
+	#		SC PROTOSS
+	####################################################################################################
+
+	MPStartUnits@mcvonlyprotoss:
+		Class: none
+		ClassName: MCV Only
+		Factions: protoss
+		BaseActor: scpmcv
+
+	MPStartUnits@defaultprotoss:
+		Class: light
+		ClassName: Light Support
+		Factions: protoss
+		BaseActor: scpmcv
+		SupportActors: sczealot, scdragoon
+
+	MPStartUnits@heavyprotoss:
+		Class: heavy
+		ClassName: Heavy Support
+		Factions: protoss
+		BaseActor: scpmcv
+		SupportActors: sczealot, sczealot, scdragoon, scdragoon
+
+	####################################################################################################
+	#		SC ZERG
+	####################################################################################################
+
+	MPStartUnits@mcvonlyzerg:
+		Class: none
+		ClassName: MCV Only
+		Factions: zerg
+		BaseActor: sczmcv
+
+	MPStartUnits@defaultzerg:
+		Class: light
+		ClassName: Light Support
+		Factions: zerg
+		BaseActor: sczmcv
+		SupportActors: sczergling, sczergling, sczergling, sczergling, schydralisk, schydralisk
+
+	MPStartUnits@heavyzerg:
+		Class: heavy
+		ClassName: Heavy Support
+		Factions: zerg
+		BaseActor: sczmcv
+		SupportActors: sczergling, sczergling, sczergling, sczergling, sczergling, sczergling, sczergling, sczergling, schydralisk, schydralisk, schydralisk, schydralisk
+        
 Player:
 	ClassicProductionQueue@RABUILDINGTERRAN:
 		Type: RABuilding.Terran
@@ -595,7 +693,7 @@ SCBUNKER:
 	BodyOrientation:
 		QuantizedFacings: 8
 	Cargo:
-		Types: Infantry, Hacker
+		Types: Infantry, Hacker, Fremen
 		MaxWeight: 4
 		PipCount: 4
 		EjectOnDeath: false
@@ -3695,7 +3793,7 @@ SCDROPSHIP:
 	Armor:
 		Type: Light
 	Cargo:
-		Types: Infantry, Hacker, Vehicle
+		Types: Infantry, Hacker, Fremen, Vehicle
 		MaxWeight: 8
 		PipCount: 8
 		AfterLoadDelay: 0
@@ -4243,7 +4341,7 @@ SCSHUTTLE:
 		Range: 7c0
 		Type: GroundPosition
 	Cargo:
-		Types: Infantry, Hacker, Vehicle
+		Types: Infantry, Hacker, Fremen, Vehicle
 		MaxWeight: 8
 		PipCount: 8
 		AfterLoadDelay: 0
@@ -5065,7 +5163,7 @@ SCOVERLORD:
 		IdealSeparation: 1c0
 		RepulsionSpeed: 10
 	Cargo:
-		Types: Infantry, Hacker, Vehicle
+		Types: Infantry, Hacker, Fremen, Vehicle
 		MaxWeight: 8
 		PipCount: 8
 		AfterLoadDelay: 0

@@ -1,4 +1,7 @@
+^AnyMissile:
+
 ^MissileWeapon:
+    Inherits: ^AnyMissile
 	ReloadDelay: 50
 	Range: 6c0
 	MinRange: 0c512
@@ -26,6 +29,7 @@
 			Light: 140
             Medium: 140
 			Heavy: 140
+            Concrete: 84
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Crater

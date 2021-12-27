@@ -7,13 +7,29 @@ Speech:
 		modfrance: r_
 		modrussia: r_
 		modukranie: r_
+		modirak: r_
+        modgreek: r_
+        modusa: r_
+        modjapan: r_
+        modants: tws_
 		camea: twg_
 		gdi: g_
 		nod: n_
+        gdispecialf: g_
+        modsteel: g_
+        chemnod: n_
+		modblackhand: n_
+		modblackhandr: n_
+        nodscavenger: n_
+        iok: n_
+        tiberiump: n_
 		tsgdi: tsg_
 		tsnod: tsn_
 		forgotten: tsg_
 		cabal: tsn_
+		tagdi: tsg_
+		tanod: tsn_
+		taforgotten: tsg_
 		gla: gla_
         glacamo: gla_
         glatoxin: gla_
@@ -49,6 +65,7 @@ Speech:
 		togran: dr_
 		aterrorist: dr_
 		eodaliens: dr_
+        actibliz: dr_
 		atreides: d2ka_
 		harkonnen: d2kh_
 		ordos: d2ko_
@@ -57,7 +74,11 @@ Speech:
         fremen: d2ka_
         ixian: d2ka_
         corrino: d2kh_
+        emperor: twn_
         guild: d2ksg_
+        oatreides: d2ka_
+		oharkonnen: d2kh_
+		oordos: d2ko_
         smugglers: d2ksg_
         ra2america: ra2a_
         ra2french: ra2a_
@@ -77,6 +98,7 @@ Speech:
 		terran: sct_
 		zerg: scz_
 		protoss: scp_
+        xmas: r_
         orangestar: r_
         bluemoon: r_
         greenearth: r_
@@ -102,6 +124,11 @@ Speech:
         sow: sow_
         human: r_
         orc: r_
+        dtomorrow: dtt_
+        dtanswer: dta_
+        dtrussia: dta_
+        dtusa: dta_
+        dtjapan: dta_
         all: tws_
         custom: r_        
         allgdi: twg_
@@ -173,7 +200,34 @@ Speech:
         sowairforcelost: airforcelost
 		DeathHandAvailable: dhrdy
         DeathHandCharging: dhchg
+		DTBacterialStrikeL: bacterialsl1
+		DTBacterialStrikeAv: bacterialsa2
+		DTBacterialStrikeAp: bacterialsa1
 Sounds:
+	Prefixes:
+		allies: r_
+		soviet: r_
+		modengland: r_
+		modgermany: r_
+		modfrance: r_
+		modrussia: r_
+		modukranie: r_
+		modirak: r_
+		modgreek: r_
+		modusa: r_
+		modjapan: r_
+		modants: r_
+		atreides: d2k_
+		harkonnen: d2k_
+		ordos: d2k_
+		mercenary: d2k_
+		tleilaxu: d2k_
+		fremen: d2k_
+		ixian: d2k_
+		corrino: d2k_
+		guild: d2k_
+		smugglers: d2k_
+        emperor: d2k_
 	Notifications:
 		Appear: appear1
 		Beacon: bleep2

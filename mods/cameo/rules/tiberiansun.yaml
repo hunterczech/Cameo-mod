@@ -1,3 +1,120 @@
+World:
+	FactionCA@tsgdi:
+		Name: GDI TS
+		InternalName: tsgdi
+        Game: Tiberian Sun
+		Side: Factions
+		Description: GDI from Tiberian Sun\nFeatures:\n- Hero unit: Mammoth Mk. II\nSupport powers: Drop Pods, Ion Cannon
+	FactionCA@tsnod:
+		Name: Nod TS
+		InternalName: tsnod
+        Game: Tiberian Sun      
+		Side: Factions
+		Description: Nod from Tiberian Sun\nFeatures:\n- Subterranean vehicles\n- Stealth generators\n- Tactical missiles with fast charge and flight time\nSupport powers: Cluster & Chemical Missiles
+	FactionCA@forgotten:
+		Name: Forgotten TS
+		InternalName: forgotten
+        Game: Tiberian Sun      
+		Side: Factions
+		Description: Custom Forgotten from Tiberian Sun\nSupport powers: Mutant Commando, Wildlife Rampage
+	FactionCA@cabal:
+		Name: CABAL TS
+		InternalName: cabal
+        Game: Tiberian Sun      
+		Side: Factions
+		Description: CABAL from Tiberian Sun Firestorm\nFeatures:\n- Subterranean vehicles\n- Stealth generators\n- Cluster & Chemical Missiles with fast charge and flight time\n- Most units immune to mind control\n- Epic unit: Core Defender\nSupport powers: Cluster & Chemical Missiles
+	FactionCA@RandomTS:
+		Name: Any
+		InternalName: RandomTS
+		RandomFactionMembers: tsnod, tsgdi, forgotten, cabal
+        Game: Tiberian Sun
+		Side: Random
+		Description: Random Faction\nA random faction from Tiberian Sun will be chosen when the game starts.
+        
+	####################################################################################################
+	#		MPSTARTUNITS
+	####################################################################################################
+
+	MPStartUnits@mcvonlyratsgdi:
+		Class: none
+		ClassName: MCV Only
+		Factions: tsgdi
+		BaseActor: tsmcvgdi
+
+	MPStartUnits@defaulttsgdi:
+		Class: light
+		ClassName: Light Support
+		Factions: tsgdi
+		BaseActor: tsmcvgdi
+		SupportActors: tse1,tse1,tse1,tse2,tse2,tssmech,tsmmch
+
+	MPStartUnits@heavytsgdi:
+		Class: heavy
+		ClassName: Heavy Support
+		Factions: tsgdi
+		BaseActor: tsmcvgdi
+		SupportActors: tse1,tse1,tse1,tse2,tse2,tssmech,tsmmch,tsmmch,tsmmch,tsmmch
+
+	MPStartUnits@mcvonlyratsnod:
+		Class: none
+		ClassName: MCV Only
+		Factions: tsnod
+		BaseActor: tsmcvnod
+
+	MPStartUnits@defaulttsnod:
+		Class: light
+		ClassName: Light Support
+		Factions: tsnod
+		BaseActor: tsmcvnod
+		SupportActors: tse1,tse1,tse1,tse3,tse3,tsbggy,tsttnk
+
+	MPStartUnits@heavytsnod:
+		Class: heavy
+		ClassName: Heavy Support
+		Factions: tsnod
+		BaseActor: tsmcvnod
+		SupportActors: tse1,tse1,tse1,tse3,tse3,tsbggy,tsttnk,tsttnk,tsttnk,tsttnk
+
+	MPStartUnits@mcvonlyraforgotten:
+		Class: none
+		ClassName: MCV Only
+		Factions: forgotten
+		BaseActor: tsmcvmutant
+
+	MPStartUnits@defaultforgotten:
+		Class: light
+		ClassName: Light Support
+		Factions: forgotten
+		BaseActor: tsmcvmutant
+		SupportActors: tsmutant,tsmutant,tsmwmn,tsmutant3,tsmutant3,tscar2,ts1tnk
+
+	MPStartUnits@heavyforgotten:
+		Class: heavy
+		ClassName: Heavy Support
+		Factions: forgotten
+		BaseActor: tsmcvmutant
+		SupportActors: tsmutant,tsmutant,tsmwmn,tsmutant3,tsmutant3,tscar2,ts1tnk,ts2tnk,ts2tnk,ts2tnk
+
+	MPStartUnits@mcvonlyracabal:
+		Class: none
+		ClassName: MCV Only
+		Factions: cabal
+		BaseActor: tsmcvcabal
+
+	MPStartUnits@defaultcabal:
+		Class: light
+		ClassName: Light Support
+		Factions: cabal
+		BaseActor: tsmcvcabal
+		SupportActors: tscyborg,tscyborg,tscyborg,tsbike2,tsttnk2
+
+	MPStartUnits@heavycabal:
+		Class: heavy
+		ClassName: Heavy Support
+		Factions: cabal
+		BaseActor: tsmcvcabal
+		SupportActors: tscyborg,tscyborg,tscyborg,tsbike2,tsbike2,tsttnk2,tsttnk2,tsttnk2
+
 Player:
 	#####	TS GDI	#####
 	ClassicProductionQueue@RABUILDINGTSGDI:
@@ -318,6 +435,12 @@ Player:
     ProvidesPrerequisite@faction.forgotten:
         Prerequisite: faction.forgotten
         Factions: forgotten
+    ProvidesPrerequisite@faction.tsgdi:
+        Prerequisite: faction.tsgdi
+        Factions: tsgdi
+    ProvidesPrerequisite@faction.tsnod:
+        Prerequisite: faction.tsnod
+        Factions: tsnod
 #######################################
 # TS Defaults
 #######################################
@@ -4127,6 +4250,7 @@ TSDissolver:
     Inherits: ^Vehicle
     Inherits@EXT: ^ExternalConditions
 	Inherits@EMP: ^TurretEMP
+    Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
     Valued:
 		Cost: 750
 	Tooltip:
@@ -5022,7 +5146,7 @@ TSAPC:
 	DeliversCash:
 		Payload: 400
 	Cargo:
-		Types: Infantry, Hacker
+		Types: Infantry, Hacker, Fremen
 		MaxWeight: 5
 		PipCount: 5
 	GrantConditionOnTerrain:
@@ -5833,7 +5957,7 @@ TSSAPC:
 	DeliversCash:
 		Payload: 400
 	Cargo:
-		Types: Infantry, Hacker
+		Types: Infantry, Hacker, Fremen
 		MaxWeight: 5
 		PipCount: 5
 		UnloadTerrainTypes: Clear, ClearTemperat, ClearWinter, ClearJungle, ClearSnow, ClearDesert, ClearInterior, Rough, Road, Beach, ClearDune, Dune, Concrete, Sand, SpiceSand, Spice
@@ -6551,7 +6675,7 @@ tsm113:
 	WithVoxelBody:
 	WithVoxelTurret:
 	Cargo:
-		Types: Infantry, Hacker
+		Types: Infantry, Hacker, Fremen
 		MaxWeight: 5
 		PipCount: 5
 		LoadingCondition: notmobile

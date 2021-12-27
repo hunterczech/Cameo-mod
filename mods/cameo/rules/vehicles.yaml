@@ -143,7 +143,7 @@ HARV:
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: proc
-		Queue: Vehicle.GDI, Vehicle.Nod, RAVehicle.GDI, RAVehicle.Nod, Infantry.X_Infantry, Vehicle.X_Vehicles, Aircraft.X_Aircrafts, Vehicle.X_Monsters
+		Queue: Vehicle.GDI, Vehicle.Nod, RAVehicle.GDI, RAVehicle.Nod, Infantry.X_Infantry, Vehicle.X_Vehicles, Aircraft.X_Aircrafts, Vehicle.X_Monsters, Vehicle.MODNodR, RAVehicle.MODNodR, Vehicle.MODNod, RAVehicle.MODNod, Vehicle.MODGDI, RAVehicle.MODGDI
 		BuildDurationModifier: 40
 		Description: Collects Tiberium for processing.\n  Unarmed
 	Selectable:
@@ -241,7 +241,7 @@ APC:
 	WithMuzzleOverlay:
 	WithSpriteTurret:
 	Cargo:
-		Types: Infantry, Hacker
+		Types: Infantry, Hacker, Fremen
 		MaxWeight: 5
 		PipCount: 5
 		LoadingCondition: notmobile
@@ -381,7 +381,7 @@ BGGY:
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: afld
-		Queue: Vehicle.Nod, RAVehicle.Nod, Vehicle.X_Vehicles
+		Queue: Vehicle.Nod, RAVehicle.Nod, Vehicle.X_Vehicles, Vehicle.MODNod, RAVehicle.MODNod
 		Description: Fast scout and anti-infantry vehicle.\n  Strong vs Infantry\n  Weak vs Tanks
 	Mobile:
 		TurnSpeed: 16
@@ -563,7 +563,7 @@ MTNK:
 		AddToArmyValue: true
 	Buildable:
 		BuildPaletteOrder: 40
-		Queue: Vehicle.GDI, RAVehicle.GDI, Vehicle.X_Vehicles
+		Queue: Vehicle.GDI, RAVehicle.GDI, Vehicle.X_Vehicles, Vehicle.MODGDI, RAVehicle.MODGDI
 		Description: General-Purpose GDI Tank.\n  Strong vs Tanks, Vehicles\n  Weak vs Infantry
 	Mobile:
 		Speed: 85
@@ -614,7 +614,7 @@ HTNK:
 	Buildable:
 		BuildPaletteOrder: 60
 		Prerequisites: fix
-		Queue: Vehicle.GDI, RAVehicle.GDI, Vehicle.X_Vehicles
+		Queue: Vehicle.GDI, RAVehicle.GDI, Vehicle.X_Vehicles, Vehicle.MODGDI, RAVehicle.MODGDI
 		Description: Heavily armored GDI Tank.\nCan attack Aircraft.\n  Strong vs Everything
         BuildDuration: 500
         BuildDurationModifier: 100
@@ -685,7 +685,7 @@ MSAM:
 	Buildable:
 		BuildPaletteOrder: 50
 		Prerequisites: anyhq
-		Queue: Vehicle.GDI, RAVehicle.GDI, Vehicle.X_Vehicles
+		Queue: Vehicle.GDI, RAVehicle.GDI, Vehicle.X_Vehicles, Vehicle.MODGDI, RAVehicle.MODGDI
 		Description: Long range rocket artillery.\n  Strong vs all Ground units.
 	Mobile:
 		Speed: 85
@@ -888,7 +888,7 @@ TRUCK:
 	Inherits: ^Vehicle
 	Inherits@selection: ^SelectableSupportUnit
 	Buildable:
-		Queue: Vehicle.GDI, Vehicle.Nod, RAVehicle.GDI, RAVehicle.Nod
+		Queue: Vehicle.GDI, Vehicle.Nod, RAVehicle.GDI, RAVehicle.Nod, Vehicle.MODNodR, RAVehicle.MODNodR, Vehicle.MODNod, RAVehicle.MODNod, Vehicle.MODGDI, RAVehicle.MODGDI, Vehicle.d2k, RAVehicle.d2k
 		BuildPaletteOrder: 1000
 		Prerequisites: vehicleproduction
 		BuildDuration: 300
@@ -917,3 +917,37 @@ TRUCK:
 	Selectable:
 		Class: truck
 
+####################################################################################################
+#		Test
+####################################################################################################
+HDTRUCK:
+	Inherits: ^Vehicle
+	Inherits@cargo: ^CargoVehicle
+	Buildable:
+		Queue: Vehicle.GDI, Vehicle.Nod, RAVehicle.GDI, RAVehicle.Nod
+		BuildPaletteOrder: 1000
+		Prerequisites: vehicleproduction
+		BuildDuration: 300
+		Description: Transports cash to other players.\n  Unarmed
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Transport Truck
+	Health:
+		HP: 22000
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 128
+	RevealsShroud:
+		Range: 4c0
+	Inherits@EXT: ^ExternalConditions
+	Cargo:
+		Types: Infantry, Hacker, Fremen
+		MaxWeight: 8
+		PipCount: 8
+		LoadingCondition: notmobile
+	RenderSprites:
+		Image: hdtruck
+		Scale: 0.4
+        PlayerPalette: ra2player

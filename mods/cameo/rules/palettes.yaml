@@ -196,15 +196,15 @@
 		MenuEffect: Desaturated
 	FlashPaletteEffect:
 	RotationPaletteEffect@water:
-		ExcludePalettes: effect, chrome, d2k, d2kunit, playerd2k, d2kcloak, deviatorgas, d2k-terrain, ra2, cnc, ra, player, windows256
+		ExcludePalettes: effect, chrome, d2k, d2kunit, playerd2k, d2kcloak, deviatorgas, ra2, cnc, ra, player, windows256
 		RotationBase: 32
 		ExcludeTilesets: RA_SNOW, RA_TEMPERAT, ARRAKIS			##########
 	RotationPaletteEffect@actorswater:
-		ExcludePalettes: effect, chrome, d2k, d2kunit, playerd2k, d2kcloak, deviatorgas, d2k-terrain, ra2, cnc, ra, player, windows256
+		ExcludePalettes: effect, chrome, d2k, d2kunit, playerd2k, d2kcloak, deviatorgas, ra2, cnc, ra, player, windows256
 		RotationBase: 32
         ExcludeTilesets: ARRAKIS
 	RotationPaletteEffect@rawater:
-		ExcludePalettes: effect, chrome, d2k, d2kunit, playerd2k, d2kcloak, deviatorgas, d2k-terrain, ra2, cnc, player, windows256
+		ExcludePalettes: effect, chrome, d2k, d2kunit, playerd2k, d2kcloak, deviatorgas, ra2, cnc, player, windows256
 		Tilesets: RA_SNOW, RA_TEMPERAT
 	PaletteFromPaletteWithAlpha@placelinesegment:
 		Name: placelinesegment
@@ -425,11 +425,6 @@
 		Filename: PALETTE.BIN
 		ShadowIndex: 1
 		CursorPalette: true
-   	PaletteFromFile@d2k-terrain:
-		Name: d2k-terrain
-		Tileset: ARRAKIS
-		Filename: PALETTE.BIN
-		ShadowIndex: 1
 	PaletteFromFile@d2keffect:
 		Name: d2keffect
 		Filename: PALETTE.BIN

@@ -36,6 +36,8 @@ D4nyi's Patrons:
 	• LtAlguien
 	• Willows Landrunner
 	• Sciitari
+	• Enker-Zan
+	• Decommanda
 
 Cameo uses the custom c# code from Combined Arms,
 which extends the original OpenRA engine. The code

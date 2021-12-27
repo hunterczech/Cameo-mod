@@ -1,3 +1,5 @@
+^AnyWeapon:
+
 PDLaser:
 	ReloadDelay: 5
 	ValidTargets: Ground, Air, Missile, BulletCA, BallisticMissile
@@ -201,7 +203,9 @@ instagib:
 		Explosions: instagib
 		ImpactSounds: instagib.aud
 		ImpactActors: false
-        
+	Warhead@Dryblood: CreateEffect
+		Explosions: inf_ketchup
+
 instagib1:
 	ReloadDelay: 60
 	Range: 2c768
@@ -214,6 +218,9 @@ instagib1:
 		Shadow: true
 		BounceCount: 3
 		BounceRangeModifier: 20
+		TrailImage: rlminiblood
+	Warhead@Dryblood: CreateEffect
+		Explosions: inf_ketchup
 
 instagib2:
     Inherits: instagib1
@@ -229,7 +236,27 @@ instagib4:
     Inherits: instagib1
     Projectile: Bullet
 		Image: instagib4
+
+instagib5:
+    Inherits: instagib1
+    Projectile: Bullet
+		Image: instagib5
         
+instagib6:
+    Inherits: instagib1
+    Projectile: Bullet
+		Image: instagib6
+       
+instagib7:
+    Inherits: instagib1
+    Projectile: Bullet
+		Image: instagib7
+
+instagib8:
+    Inherits: instagib1
+    Projectile: Bullet
+		Image: instagib8
+
 ####################################################################################################
 #		RA
 ####################################################################################################
@@ -403,7 +430,6 @@ MADTankDetonate:
 		Explosions: med_explosion
 		ImpactSounds: mineblo1.aud
 		ImpactActors: false
-
 ####################################################################################################
 #		2100
 ####################################################################################################
@@ -613,7 +639,26 @@ MandibleHeavy:
 			Heavy: 35
 			Concrete: 20
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
-
+SuperMandible:
+	Inherits: MandibleHeavy
+	Warhead@1Dam: SpreadDamage
+		Damage: 20000
+MandibleAA:
+	Inherits: Mandible
+	ValidTargets: Air
+	ReloadDelay: 15
+	Burst: 2
+	BurstDelays: 20
+	StartBurstReport: antbite.aud
+	Warhead@1Dam: SpreadDamage
+		Damage: 10000
+		Versus:
+			None: 100
+			Light: 90
+            Medium: 60
+			Heavy: 35
+			Concrete: 20
+		ValidTargets: Air
 AntFireball:
 	Inherits: FireballLauncher
 	Report: antbite.aud

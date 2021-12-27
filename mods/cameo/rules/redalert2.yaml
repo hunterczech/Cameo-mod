@@ -1,3 +1,165 @@
+World:
+	FactionCA@RA2America:
+		Name: America RA2
+		InternalName: ra2america
+        Game: Red Alert 2    
+		Side: Allies
+		Description: Allied Americans\nUnlocks Airborne\nSupport powers: TO DO  
+   	FactionCA@RA2French:
+		Name: France RA2
+		InternalName: ra2french
+        Game: Red Alert 2    
+		Side: Allies
+		Description: Allied French\nUnlocks Grand Cannon\nSupport powers: TO DO    
+    FactionCA@RA2German:
+		Name: Germany RA2
+		InternalName: ra2german
+        Game: Red Alert 2    
+		Side: Allies
+		Description: Allied Germans\nUnlocks Tank Destroyer\nSupport powers: TO DO     
+    FactionCA@RA2British:
+		Name: Great Britain RA2
+		InternalName: ra2british
+        Game: Red Alert 2    
+		Side: Allies
+		Description: Allied British\nUnlocks Sniper\nSupport powers: TO DO     
+    FactionCA@RA2Korea:
+		Name: Korea RA2
+		InternalName: ra2korea
+        Game: Red Alert 2    
+		Side: Allies
+		Description: Allied Korea\nUnlocks Black Eagle\nSupport powers: TO DO       
+    FactionCA@RA2KoreaAddon:
+		Name: Korea Addon RA2
+		InternalName: ra2koreaaddon
+        Game: Red Alert 2    
+		Side: Allies
+		Description: Allied Korea Addon\nUnlocks Howitzer\nSupport powers: TO DO             
+	FactionCA@ra2russia:                                            
+		Name: Russia RA2
+		InternalName: ra2russia
+        Game: Red Alert 2      
+		Side: Soviets
+		Description: Soviets\nUnlocks Tesla Tank\nSupport powers: TO DO      
+ 	FactionCA@ra2doom:                                            
+		Name: DOOM RA2
+		InternalName: ra2doom
+        Game: Red Alert 2      
+		Side: Soviets
+		Description: Soviet DOOM (Fictional faction)\nBring DOOM upon your enemies.\nSupport powers: TO DO  
+	FactionCA@ra2cuba:                                            
+		Name: Cuba RA2
+		InternalName: ra2cuba
+        Game: Red Alert 2      
+		Side: Soviets
+		Description: Cuba from Soviets\nUnlocks Cuban Terrorist\nSupport powers: TO DO  
+	FactionCA@ra2cubaaddon:                                            
+		Name: Cuba Addon RA2
+		InternalName: ra2cubaaddon
+        Game: Red Alert 2      
+		Side: Soviets
+		Description: Cuba from Soviets\nUnlocks Cloning Vats\nSupport powers: TO DO  
+	FactionCA@ra2libyan:                                            
+		Name: Libya RA2
+		InternalName: ra2libyan
+        Game: Red Alert 2      
+		Side: Soviets
+		Description: Libyans from Soviets\nUnlocks Demolition Truck\nSupport powers: TO DO  
+	FactionCA@ra2iraq:                                            
+		Name: Iraq RA2
+		InternalName: ra2iraq
+        Game: Red Alert 2      
+		Side: Soviets
+		Description: Iraq from Soviets\nUnlocks Desolator\nSupport powers: TO DO  
+	FactionCA@ra2psicorps:                                            
+		Name: Psi-Corps RA2
+		InternalName: ra2psicorps
+        Game: Red Alert 2      
+		Side: Soviets
+		Description: Original Soviets from RA2\nVanilla RA2 Soviet arsenal\n- Access to mind control and cloning vats\nSupport powers: TO DO  
+	FactionCA@ra2iraqaddon:                                            
+		Name: Iraq Addon RA2
+		InternalName: ra2iraqaddon
+        Game: Red Alert 2      
+		Side: Soviets
+		Description: Iraq from Soviets\nUnlocks Light Tanks\nSupport powers: Release the Worm
+	FactionCA@yuri:
+		Name: Yuri RA2
+		InternalName: yuri
+        Game: Red Alert 2         
+		Side: Soviets
+		Description: Yuri from RA2YR\nFeatures:\n- Mind control\nSupport powers: Genetic Mutator, Psychic Dominator	       
+	FactionCA@Randomra2:
+		Name: Any
+		InternalName: Randomra2
+		RandomFactionMembers: ra2america, ra2french, ra2german, ra2british, ra2korea, ra2koreaaddon, ra2russia, ra2doom, ra2cuba, ra2cubaaddon, ra2libyan, ra2iraq, ra2psicorps, ra2iraqaddon, yuri
+        Game: Red Alert 2
+		Side: Random
+		Description: Random Faction\nA random faction from RA2 will be chosen when the game starts.
+
+	####################################################################################################
+	#		MPSTARTUNITS
+	####################################################################################################
+
+	MPStartUnits@mcvra2allies:
+		Class: none
+		ClassName: MCV Only
+		Factions: ra2america, ra2french, ra2german, ra2british, ra2korea, ra2koreaaddon
+		BaseActor: ra2amcv
+
+	MPStartUnits@mcvra2soviet:
+		Class: none
+		ClassName: MCV Only
+		Factions: ra2russia, ra2doom, ra2cuba, ra2cubaaddon, ra2libyan, ra2iraq, ra2psicorps, ra2iraqaddon
+		BaseActor: ra2smcv
+
+	MPStartUnits@mcvyuri:
+		Class: none
+		ClassName: MCV Only
+		Factions: yuri
+		BaseActor: yrpcv
+    MPStartUnits@defaultra2allies:
+		Class: light
+		ClassName: Light Support
+		Factions: ra2america, ra2french, ra2german, ra2british, ra2korea, ra2koreaaddon
+		BaseActor: ra2amcv
+		SupportActors: ra2e1,ra2e1,ra2e1,yrggi,yrggi,ra2fv,ra2mtnk
+
+	MPStartUnits@heavyra2allies:
+		Class: heavy
+		ClassName: Heavy Support
+		Factions: ra2america, ra2french, ra2german, ra2british, ra2korea, ra2koreaaddon
+		BaseActor: ra2amcv
+		SupportActors: ra2e1,ra2e1,ra2e1,yrggi,yrggi,ra2fv,ra2mtnk,ra2mtnk,ra2mtnk,ra2tnkd,ra2fv
+
+	MPStartUnits@defaultra2soviet:
+		Class: light
+		ClassName: Light Support
+		Factions: ra2russia, ra2doom, ra2cuba, ra2cubaaddon, ra2libyan, ra2iraq, ra2psicorps, ra2iraqaddon
+		BaseActor: ra2smcv
+		SupportActors: ra2e2,ra2e2,ra2e2,ra2flakt,ra2flakt,ra2htnk,ra2htk
+
+	MPStartUnits@heavyra2soviet:
+		Class: heavy
+		ClassName: Heavy Support
+		Factions: ra2russia, ra2doom, ra2cuba, ra2cubaaddon, ra2libyan, ra2iraq, ra2psicorps, ra2iraqaddon
+		BaseActor: ra2smcv
+		SupportActors: ra2e2,ra2e2,ra2e2,ra2flakt,ra2flakt,ra2htnk,ra2htk,ra2htnk,ra2apoc
+
+	MPStartUnits@defaultyuri:
+		Class: light
+		ClassName: Light Support
+		Factions: yuri
+		BaseActor: yrpcv
+		SupportActors: yrinit,yrinit,yrinit,yrbrute,yrbrute,yrslav,yrytnk,yrltnk
+
+	MPStartUnits@heavyyuri:
+		Class: heavy
+		ClassName: Heavy Support
+		Factions: yuri
+		BaseActor: yrpcv
+		SupportActors: yrinit,yrinit,yrinit,yrbrute,yrbrute,yrslav,yrytnk,yrltnk,yrltnk,yrltnk,yrltnk,yrytnk
+        
 Player:
     ProvidesPrerequisite@anyallies:
         Prerequisite: anyallies
@@ -2983,7 +3145,7 @@ yrngbnkr:
 	BodyOrientation:
 		QuantizedFacings: 8
 	Cargo:
-		Types: Infantry, Hacker
+		Types: Infantry, Hacker, Fremen
 		MaxWeight: 6
 		PipCount: 6
 		InitialUnits: ra2e2
@@ -3499,7 +3661,7 @@ yryapowr:
 	AcceptsDeliveredExperience:							##########
 		ValidTypes: building							##########
 	Cargo:
-		Types: Infantry, Hacker
+		Types: Infantry, Hacker, Fremen
 		MaxWeight: 5
 		PipCount: 5
 		EjectOnDeath: false
@@ -4434,7 +4596,8 @@ RA2E1:
     ReloadDelayMultiplier@eliteplus:
         Modifier: 80
         RequiresCondition: rank-elite    
-        
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
 RA2CLEG:
 	Inherits: ^Soldier
 	Inherits@EXPERIENCE: ^GainsExperienceRA2
@@ -4494,7 +4657,8 @@ RA2CLEG:
     ReloadDelayMultiplier@eliteplus:
         Modifier: 40
         RequiresCondition: rank-elite  
-        
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
 YRGGI:
 	Inherits: ^Soldier
 	Inherits@EXPERIENCE: ^GainsExperienceRA2
@@ -4618,7 +4782,8 @@ YRGGI:
     ReloadDelayMultiplier@elite:
         Modifier: 90
         RequiresCondition: rank-elite       
-        
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
 RA2SNIPE:
 	Inherits: ^Soldier
 	Inherits@EXPERIENCE: ^GainsExperienceRA2
@@ -4656,6 +4821,8 @@ RA2SNIPE:
 		Payload: 300
 	GainsExperience:
 		LevelUpNotification: LevelUpRA2
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
 RA2ENGINEER:
 	Inherits: E6
 	Inherits@anim: ^RA2Infantry
@@ -4754,7 +4921,8 @@ RA2TANY:
     ReloadDelayMultiplier@eliteplus:
         RequiresCondition: rank-elite
         Modifier: 80
-        
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
 RA2SEAL:
 	Inherits: RMBO
 	Inherits@anim: ^RA2Infantry
@@ -4801,7 +4969,8 @@ RA2SEAL:
         Modifier: 80
 	GainsExperience:
 		LevelUpNotification: LevelUpRA2
-        
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
 RA2SPY:
 	Inherits: RASPY
 	Inherits@anim: ^RA2Infantry
@@ -4840,7 +5009,9 @@ RA2ADOG:
         Modifier: 125
     ReloadDelayMultiplier@eliteplus:
         RequiresCondition: rank-elite
-        Modifier: 70      
+        Modifier: 70
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
 ##############################################
 #   Red Alert 2 Soviet Infantry
 ##############################################
@@ -4920,7 +5091,9 @@ YRBORIS:
 		PercentageStep: 4
 		Delay: 50
 		StartIfBelow: 100
-        RequiresCondition: rank-elite       
+        RequiresCondition: rank-elite
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
 RA2E2:
 	Inherits: ^Soldier
 	Inherits@EXPERIENCE: ^GainsExperienceRA2
@@ -4967,7 +5140,8 @@ RA2E2:
     DamageMultiplier@eliteplus:
         Modifier: 95
         RequiresCondition: rank-elite  
-        
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
 RA2flakt:
 	Inherits: ^Soldier
 	Inherits@EXPERIENCE: ^GainsExperienceRA2
@@ -5037,7 +5211,8 @@ RA2flakt:
     RangeMultiplier@eliteplus:
         Modifier: 115
         RequiresCondition: rank-elite    
-        
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
 RA2ZOMBIE:
 	Inherits: ZOMBIE2
 	Valued:
@@ -5061,7 +5236,8 @@ RA2ZOMBIE:
         Scale: 0.8               
     GivesBounty:
         Percentage: 10
-        
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
 RA2MUTALISK:
 	Inherits: SCMUTALISK
 	Valued:
@@ -5115,7 +5291,8 @@ RA2DEMON:
         Scale: 1.2
     Health:
 		HP: 50000             
-      
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
 RA2IMP:
 	Inherits: IMP
     Inherits@AUTOTARGET: ^AutoTargetAll
@@ -5142,7 +5319,8 @@ RA2IMP:
 		LocalOffset: 256, 256, 600, 256, -256, 600    
     GivesBounty:
         Percentage: 10
-        
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
 RA2MANCUBUS:
 	Inherits: MANC
     Inherits@MC: ^MCImmune                                                    
@@ -5177,7 +5355,8 @@ RA2MANCUBUS:
         Actor: RA2SPIDER
     GivesBounty:
         Percentage: 10
-        
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
 RA2REVENANT:
 	Inherits: REVE
     Inherits@AUTOTARGET: ^AutoTargetAir
@@ -5210,7 +5389,8 @@ RA2REVENANT:
 		LocalOffset: 150,320,700, 150,-320,700
 		FireDelay: 7
 	-Armament@FOURTH:
-        
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
 RA2PINKY:
 	Inherits: PINKY
     Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
@@ -5237,7 +5417,8 @@ RA2PINKY:
 		FireDelay: 1
     GivesBounty:
         Percentage: 10 
-        
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
 RA2EXCITER:
     Inherits: EXCITER
     Inherits@MC: ^MCImmune                                                     
@@ -5294,7 +5475,8 @@ RA2SKELETON:
     Armament:
         Weapon: RA2SKELETON
 	ActorLostNotification: 
-
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
 RA2SPIDER: 
     Inherits: wc_o_spider
     RenderSprites:
@@ -5449,7 +5631,8 @@ RA2DESO:
 	-DamagedByTintedCells@rad:
 	GainsExperience:
 		LevelUpNotification: LevelUpRA2
-        
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
 RA2TRIPOD:
 	Inherits: ^Monster
 	Inherits@3: ^SpriteActor
@@ -5691,7 +5874,9 @@ ra2shk:
         RequiresCondition: rank-elite       
     ReloadDelayMultiplier@eliteplus:
         Modifier: 80
-        RequiresCondition: rank-elite     
+        RequiresCondition: rank-elite
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
 RA2DOG:
 	Inherits: DOG
     -GainsExperience:
@@ -5716,7 +5901,8 @@ RA2DOG:
     ReloadDelayMultiplier@eliteplus:
         RequiresCondition: rank-elite
         Modifier: 70
-        
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
 RA2YURI:
 	Inherits: ^Soldier
 	Inherits@EXPERIENCE: ^GainsExperienceRA2
@@ -5788,6 +5974,8 @@ RA2YURI:
 	IgnoresDisguise:
 	GainsExperience:
 		LevelUpNotification: LevelUpRA2
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
 ##############################################
 #   Red Alert 2 Yuri Infantry
 ##############################################
@@ -5847,7 +6035,8 @@ YRINIT:
     FirepowerMultiplier@eliteplus:
         Modifier: 120
         RequiresCondition: rank-elite                 
-         
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
 YRBRUTE:
 	Inherits: ^Soldier
 	Inherits@EXPERIENCE: ^GainsExperienceRA2
@@ -5902,7 +6091,9 @@ YRBRUTE:
 		PercentageStep: 10
 		Delay: 90
 		StartIfBelow: 100
-        RequiresCondition: rank-elite  
+        RequiresCondition: rank-elite
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
 YRSLAV:
 	Inherits: ^Soldier
 	Inherits@EXPERIENCE: ^GainsExperienceRA2
@@ -5964,7 +6155,8 @@ YRSLAV:
 	-TakeCover:
 	GainsExperience:
 		LevelUpNotification: LevelUpRA2
-        
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
 RA2SLAV:
     Inherits: YRSLAV
     RenderSprites:
@@ -6018,7 +6210,9 @@ YRVIRUS:
 		LevelUpNotification: LevelUpRA2
     ReloadDelayMultiplier@eliteplus:
         Modifier: 80
-        RequiresCondition: rank-elite                  
+        RequiresCondition: rank-elite
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
 YRJULIA:
 	Inherits: ^Soldier
 	Inherits@EXPERIENCE: ^GainsExperienceRA2
@@ -6053,6 +6247,8 @@ YRJULIA:
 		Payload: 600
 	GainsExperience:
 		LevelUpNotification: LevelUpRA2
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
 YRYURI:
 	Inherits: RA2YURI
 	Valued:
@@ -6069,6 +6265,8 @@ YRYURI:
 		HP: 5000
 	GainsExperience:
 		LevelUpNotification: LevelUpRA2
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
 YRYURIX:
 	Inherits: ^Soldier
 	Inherits@EXPERIENCE: ^GainsExperienceRA2
@@ -6140,6 +6338,8 @@ YRYURIX:
 		CrushClasses: vehicle
 	GainsExperience:
 		LevelUpNotification: LevelUpRA2
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
 ##############################################
 #   Red Alert 2 Allies Vehicles
 ##############################################
@@ -6294,7 +6494,8 @@ RA2MTNK:
     RangeMultiplier@eliteplus:
         RequiresCondition: rank-elite
         Modifier: 110
-        
+	ProducibleWithLevel:
+		Prerequisites: vehicles.upgraded
 YRROBO:
 	Inherits: ^Tank
 	Inherits@EXPERIENCE: ^GainsExperienceRA2
@@ -6380,7 +6581,9 @@ YRROBO:
 		PercentageStep: 5
 		Delay: 40
 		StartIfBelow: 100      
-        RequiresCondition: rank-elite    
+        RequiresCondition: rank-elite   
+	ProducibleWithLevel:
+		Prerequisites: vehicles.upgraded
 RA2TNKD:
 	Inherits: ^Tank
 	Inherits@EXPERIENCE: ^GainsExperienceRA2
@@ -6455,7 +6658,9 @@ RA2TNKD:
 		PercentageStep: 15
 		Delay: 120
 		StartIfBelow: 100
-        RequiresCondition: rank-elite  
+        RequiresCondition: rank-elite
+	ProducibleWithLevel:
+		Prerequisites: vehicles.upgraded
 RA2FV:
 	Inherits: ^Vehicle
 	Inherits@EXPERIENCE: ^GainsExperienceRA2
@@ -6480,6 +6685,8 @@ RA2FV:
 		Locomotor: wheeled
 		Speed: 150
 		PauseOnCondition: notmobile || disabled
+    ReloadDelayMultiplier@nerf:
+        Modifier: 133
 	Health:
 		HP: 20000
 	Repairable:
@@ -6743,6 +6950,8 @@ RA2FV:
 	WithMuzzleOverlay:
 	GainsExperience:
 		LevelUpNotification: LevelUpRA2
+	ProducibleWithLevel:
+		Prerequisites: vehicles.upgraded
 RA2FVBOTMG:
 	Inherits: RA2FV
 	Buildable:
@@ -6837,7 +7046,9 @@ RA2SREF:
         Modifier: 105
     DamageMultiplier@eliteplus:
         Modifier: 90
-        RequiresCondition: rank-elite    
+        RequiresCondition: rank-elite
+	ProducibleWithLevel:
+		Prerequisites: vehicles.upgraded
 RA2MGTK:
 	Inherits: ^Tank
 	Inherits@EXPERIENCE: ^GainsExperienceRA2
@@ -6926,6 +7137,8 @@ RA2MGTK:
 		Delay: 40
 		StartIfBelow: 100      
         RequiresCondition: rank-elite
+	ProducibleWithLevel:
+		Prerequisites: vehicles.upgraded
 yrbfrt:
 	Inherits: ^Tank
 	Inherits@EXPERIENCE: ^GainsExperienceRA2
@@ -6972,7 +7185,7 @@ yrbfrt:
 	AttackFrontal:
 	Cargo:
 		UnloadVoice: Move
-		Types: Infantry, Hacker
+		Types: Infantry, Hacker, Fremen
 		MaxWeight: 6
 		PipCount: 6
 		EjectOnDeath: false
@@ -7002,6 +7215,8 @@ yrbfrt:
 		Image: yrbfrt
 	GainsExperience:
 		LevelUpNotification: LevelUpRA2
+	ProducibleWithLevel:
+		Prerequisites: vehicles.upgraded
 yrbfrt.bot:
 	Inherits: yrbfrt
 	Tooltip:
@@ -7160,7 +7375,9 @@ RA2HTNK:
 		PercentageStep: 15
 		Delay: 150
 		StartIfBelow: 100
-        RequiresCondition: rank-elite          
+        RequiresCondition: rank-elite
+	ProducibleWithLevel:
+		Prerequisites: vehicles.upgraded
 RA2HTK:
 	Inherits: ^Tank
 	Inherits@EXPERIENCE: ^GainsExperienceRA2
@@ -7221,13 +7438,15 @@ RA2HTK:
 	DeliversCash:
 		Payload: 250
 	Cargo:
-		Types: Infantry, Hacker
+		Types: Infantry, Hacker, Fremen
 		MaxWeight: 4
 		PipCount: 4
 		LoadingCondition: notmobile
 		EjectOnDeath: false
 	GainsExperience:
 		LevelUpNotification: LevelUpRA2
+	ProducibleWithLevel:
+		Prerequisites: vehicles.upgraded
 ra2htk.bot1:
 	Inherits: RA2HTK
 	Buildable:
@@ -7328,7 +7547,8 @@ RA2APOC:
 		Delay: 80
 		StartIfBelow: 100
         RequiresCondition: rank-elite          
-        
+	ProducibleWithLevel:
+		Prerequisites: vehicles.upgraded  
 RA2V3:
 	Inherits: ^Vehicle
 	Inherits@EXPERIENCE: ^GainsExperienceRA2
@@ -7401,7 +7621,8 @@ RA2V3:
 		Delay: 50
 		StartIfBelow: 100
         RequiresCondition: rank-elite        
-        
+	ProducibleWithLevel:
+		Prerequisites: vehicles.upgraded
 RA2V3ROCKET:
 	Inherits: ^ShootableMissile
 	Inherits@Voxel: ^RenderVoxel
@@ -7482,7 +7703,8 @@ RA2TTNK:
     ReloadDelayMultiplier@eliteplus:
         Modifier: 80
         RequiresCondition: rank-elite         
-        
+	ProducibleWithLevel:
+		Prerequisites: vehicles.upgraded
 RA2HARV:
 	Inherits: HARV
 	Inherits@EXPERIENCE: ^GainsExperienceRA2
@@ -7520,7 +7742,8 @@ RA2HARV:
     FirepowerMultiplier@eliteplus:
         Modifier: 140
         RequiresCondition: rank-elite             
-        
+	ProducibleWithLevel:
+		Prerequisites: vehicles.upgraded
 ra2dtruck:
 	Inherits: DTRK
 	Inherits@Voxel: ^RenderVoxel
@@ -7707,6 +7930,8 @@ YRSMIN:
 	WithMuzzleOverlay:
 	GainsExperience:
 		LevelUpNotification: LevelUpRA2
+	ProducibleWithLevel:
+		Prerequisites: vehicles.upgraded
 yrsmin.empy:
 	Inherits: YRSMIN
 	Valued:
@@ -7813,7 +8038,8 @@ YRYTNK:
 		PercentageStep: 5
 		Delay: 50
 		StartIfBelow: 100
-        
+	ProducibleWithLevel:
+		Prerequisites: vehicles.upgraded
 YRLTNK:
 	Inherits: RA2MTNK
 	Tooltip:
@@ -7857,7 +8083,9 @@ YRLTNK:
 		PercentageStep: 5
 		Delay: 50
 		StartIfBelow: 100
-        RequiresCondition: rank-elite        
+        RequiresCondition: rank-elite    
+	ProducibleWithLevel:
+		Prerequisites: vehicles.upgraded        
 YRTELE:
 	Inherits: ^Tank
 	Inherits@EXPERIENCE: ^GainsExperienceRA2
@@ -7923,7 +8151,9 @@ YRTELE:
         RequiresCondition: rank-elite        
     RangeMultiplier@eliteplus:
         Modifier: 115
-        RequiresCondition: rank-elite                    
+        RequiresCondition: rank-elite
+	ProducibleWithLevel:
+		Prerequisites: vehicles.upgraded
 YRCAOS:
 	Inherits: ^Vehicle
 	Inherits@EXPERIENCE: ^GainsExperienceRA2
@@ -8057,6 +8287,8 @@ YRMIND:
 		Payload: 875
 	GainsExperience:
 		LevelUpNotification: LevelUpRA2
+	ProducibleWithLevel:
+		Prerequisites: vehicles.upgraded
 RA2TRUK:
 	Inherits: TRUCK
 	Buildable:
@@ -8292,7 +8524,7 @@ ra2lcrf:
 	DeliversCash:
 		Payload: 450
 	Cargo:
-		Types: Infantry, Hacker, Vehicle
+		Types: Infantry, Hacker, Fremen, Vehicle
 		MaxWeight: 12
 		PipCount: 12
 		PassengerFacing: 0
@@ -8335,7 +8567,7 @@ yrhovr:
 	DeliversCash:
 		Payload: 450
 	Cargo:
-		Types: Infantry, Hacker, Vehicle
+		Types: Infantry, Hacker, Fremen, Vehicle
 		MaxWeight: 12
 		PipCount: 12
 		PassengerFacing: 0
@@ -8503,7 +8735,7 @@ ra2sapc:
 	DeliversCash:
 		Payload: 450
 	Cargo:
-		Types: Infantry, Hacker, Vehicle
+		Types: Infantry, Hacker, Fremen, Vehicle
 		MaxWeight: 12
 		PipCount: 12
 		PassengerFacing: 0
@@ -8939,7 +9171,8 @@ RA2ZEP:
     SpeedMultiplier@eliteplus:
         Modifier: 125
         RequiresCondition: rank-elite   
-        
+	ProducibleWithLevel:
+		Prerequisites: aircraft.upgraded
 RA2ZEPDOOM:
     Inherits: RA2ZEP
     RenderSprites:
@@ -9051,7 +9284,8 @@ yrschp:
     ReloadDelayMultiplier@eliteplus:
         Modifier: 80
         RequiresCondition: rank-elite           
-        
+	ProducibleWithLevel:
+		Prerequisites: aircraft.upgraded
 RA2FALC:
 	Inherits: ^Helicopter
 	Inherits@EXPERIENCE: ^GainsExperienceRA2
@@ -9133,7 +9367,8 @@ RA2FALC:
 		FacingTolerance: 20
 	GainsExperience:
 		LevelUpNotification: LevelUpRA2  
-        
+	ProducibleWithLevel:
+		Prerequisites: aircraft.upgraded
 RA2BEAG:
 	Inherits: RA2FALC
 	Valued:
@@ -9217,7 +9452,7 @@ ra2shad:
 		MuzzleSequence: muzzle
 	WithMuzzleOverlay:
 	Cargo:
-		Types: Infantry, Hacker
+		Types: Infantry, Hacker, Fremen
 		MaxWeight: 5
 		PipCount: 5
 		AfterLoadDelay: 0
@@ -9258,7 +9493,8 @@ ra2shad:
     SpeedMultiplier@eliteplus:
         RequiresCondition: rank-elite
         Modifier: 115
-        
+	ProducibleWithLevel:
+		Prerequisites: aircraft.upgraded
 ra2shad.bot1:
 	Inherits: ra2shad
 	Inherits@bot: ^BotMicromanageable
@@ -9341,6 +9577,8 @@ ra2hind:
 		NormalsPalette: ts-normals
 	GainsExperience:
 		LevelUpNotification: LevelUpRA2
+	ProducibleWithLevel:
+		Prerequisites: aircraft.upgraded
 YRDISK:
 	Inherits: ^Helicopter
 	Inherits@EXPERIENCE: ^GainsExperienceRA2
@@ -9428,7 +9666,9 @@ YRDISK:
 		PercentageStep: 10
 		Delay: 100
 		StartIfBelow: 100
-        RequiresCondition: rank-elite           
+        RequiresCondition: rank-elite
+	ProducibleWithLevel:
+		Prerequisites: aircraft.upgraded
 ra2rock:
 	Inherits: ^Helicopter
 	Inherits@EXPERIENCE: ^GainsExperienceRA2
@@ -9502,7 +9742,8 @@ ra2rock:
 		Delay: 40
 		StartIfBelow: 100        
         RequiresCondition: rank-elite   
-        
+	ProducibleWithLevel:
+		Prerequisites: aircraft.upgraded
 ra2rock.husk:
 	Inherits: ^HelicopterHusk
 	RenderSprites:
@@ -9584,6 +9825,8 @@ ra2hornet:
 	-MapEditorData:
 	GainsExperience:
 		LevelUpNotification: LevelUpRA2
+	ProducibleWithLevel:
+		Prerequisites: aircraft.upgraded
 ra2asw:
 	Inherits: ra2hornet
 	Valued:
